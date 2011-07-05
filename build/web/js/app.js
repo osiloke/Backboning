@@ -10359,13 +10359,8 @@ window.jQuery = window.$ = jQuery;
     function BookCollection() {
       BookCollection.__super__.constructor.apply(this, arguments);
     }
+    BookCollection.prototype.url = 'http://google.com';
     BookCollection.prototype.model = Book;
-    BookCollection.prototype.url = '/books';
-    BookCollection.prototype.cheap = function() {
-      return this.filter(function(book) {
-        return book.get('price' < 10.0);
-      });
-    };
     return BookCollection;
   })();
 }).call(this);

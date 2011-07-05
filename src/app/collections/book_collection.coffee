@@ -1,7 +1,4 @@
 Book = require('models/book_model').Book
 class exports.BookCollection extends Backbone.Collection
+  url   : 'http://google.com',
   model : Book
-  url   : '/books',
-  cheap : ->
-    @filter (book) ->
-      book.get 'price' < 10.0
